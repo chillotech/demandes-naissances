@@ -5,24 +5,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculatrice</title>
+    <link href="styles/bootstrap.css" rel="stylesheet" />
 </head>
 
 <body>
-    <section>
+    <section class="container">
         <form>
-            <div>
-                <input type="number" name="firstNumber" id="firstNumber" />
-                <input type="number" name="sectionNumber" id="sectionNumber" />
+            <div class="row">
+                <div class="mb-3 col">
+                    <label for="firstNumber" class="form-label">Premier nombre</label>
+                    <input type="number" class="form-control" id="firstNumber" placeholder="10" />
+                </div>
+                <div class="mb-3 col">
+                    <label for="secondNumber" class="form-label">Second nombre</label>
+                    <input type="number" class="form-control" id="secondNumber" placeholder="10" />
+                </div>
             </div>
-            <div>
-                <select name="operation" id="operation">
+            <div class="mb-3">
+                <select name="operation" id="operation" class="form-select">
                     <option>Sélectionner</option>
                     <option>Addition</option>
                     <option>Produit</option>
                 </select>
             </div>
-            <div>
-                <button type="submit">Calculer</button>
+            <div class="d-grid gap-2 mb-3">
+                <button class="btn btn-primary" type="submit">Calculer</button>
             </div>
         </form>
         <p id="resultat"></p>
